@@ -1,9 +1,14 @@
-import CheckboxInput from "./CheckboxInput";
 import UserDetailsForm from "./UserDetailsForm";
-
-function LogIn() {
+function RegisterForm() {
   return (
     <>
+      <UserDetailsForm
+        htmlFor="name"
+        label="Name:"
+        type="text"
+        placeholder="John doe"
+        id="name"
+      />
       <UserDetailsForm
         htmlFor="email"
         label="Email Address"
@@ -12,15 +17,21 @@ function LogIn() {
         id="email"
       />
       <UserDetailsForm
+        htmlFor="tel"
+        label="Phone Number"
+        type="tel"
+        placeholder="+234"
+        id="tel"
+      />
+      <UserDetailsForm
         htmlFor="password"
         label="Password"
         type="password"
         placeholder="xxxxxxxx"
         id="password"
       />
-      <CheckboxInput />
     </>
   );
 }
 
-export default LogIn;
+export default RegisterForm;

@@ -1,12 +1,28 @@
+import { useState } from "react";
 import SignUpImage from "../assets/UI/icons-and-images/sign-in-image.png";
-import UserDetailsForm from "./UserDetailsForm";
+import RegisterForm from "./RegisterForm";
+import LogIn from "./LogIn";
+import GoogleButton from "./GoogleButton";
+import SubmitButton from "./SubmitButton";
+import ToggleSignUp from "./ToggleSignUp";
+import { useNavigate } from "react-router-dom";
 function SignUp() {
+  const navigator = useNavigate();
+  const [isOnLogin, setIsOnLogin] = useState(true);
+  const [toggleGoogleButton, setToggleGoogleButton] = useState(true);
+  const homeClick = () => {
+    navigator("/");
+  };
+  const handleClick = () => {
+    setIsOnLogin(!isOnLogin);
+    setToggleGoogleButton(!toggleGoogleButton);
+  };
   return (
     <div className="sign">
       <div className="sign-image-style">
         <img src={SignUpImage} alt="Sign-up-image" />
         <div className="image-details">
-          <div className="sign-up-header">
+          <div onClick={homeClick} className="sign-up-header">
             <h2>Elite Emporium</h2>
             <p>elegance &amp; luxury</p>
           </div>
@@ -19,51 +35,30 @@ function SignUp() {
         </div>
       </div>
       <div className="user-details">
-        <div className="toggle">
-          <div className="switch">
-            <p>Sign Up</p>
-          </div>
-          <div className="switchLog">
-            <p>Log In</p>
-          </div>
+        <div onClick={handleClick} className="toggle">
+          {isOnLogin ? (
+            <ToggleSignUp
+              switchStyle="switch"
+              switchDetails="Sign Up"
+              switchP="Log in"
+            />
+          ) : (
+            <ToggleSignUp
+              switchP="Sign up"
+              switchDetails="Log in"
+              switchStyle="switch"
+            />
+          )}
         </div>
-
         <form>
-          <UserDetailsForm
-            htmlFor="name"
-            label="Name:"
-            type="text"
-            placeholder="John doe"
-            id="name"
-          />
-          <UserDetailsForm
-            htmlFor="email"
-            label="Email Address"
-            type="email"
-            placeholder="johndoe@gmail.com"
-            id="email"
-          />
-          <UserDetailsForm
-            htmlFor="tel"
-            label="Phone Number"
-            type="tel"
-            placeholder="+234"
-            id="tel"
-          />
-          <UserDetailsForm
-            htmlFor="password"
-            label="Password"
-            type="password"
-            placeholder="xxxxxxxx"
-            id="password"
-          />
-
+          {isOnLogin ? <RegisterForm /> : <LogIn />}
           <div className="buttons">
-            <button className="signButton" type="submit">
-              Sign Up
-            </button>
-            <p className="orText">or</p>
-            <button className="google">Continue with Google</button>
+            {isOnLogin ? (
+              <SubmitButton buttonValue="Sign up" />
+            ) : (
+              <SubmitButton buttonValue="Login" />
+            )}
+            {toggleGoogleButton && <GoogleButton />}
           </div>
         </form>
       </div>
