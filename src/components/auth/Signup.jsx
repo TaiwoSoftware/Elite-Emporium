@@ -6,18 +6,26 @@ function SignUp() {
       <div className="sign-image-style">
         <img src={SignUpImage} alt="Sign-up-image" />
         <div className="image-details">
-          <h2>Elite Emporium</h2>
-          <p>elegance &amp; luxury</p>
-          <h1>
-            Ditch the labels, Dress <br />
-            your vibe
-          </h1>
+          <div className="sign-up-header">
+            <h2>Elite Emporium</h2>
+            <p>elegance &amp; luxury</p>
+          </div>
+          <div className="sign-up-lowerDetails">
+            <h1>
+              Ditch the labels, Dress <br />
+              your vibe
+            </h1>
+          </div>
         </div>
       </div>
       <div className="user-details">
         <div className="toggle">
-          <p>Sign Up</p>
-          <p>Log In</p>
+          <div className="switch">
+            <p>Sign Up</p>
+          </div>
+          <div className="switchLog">
+            <p>Log In</p>
+          </div>
         </div>
 
         <form>
@@ -50,8 +58,13 @@ function SignUp() {
             id="password"
           />
 
-          <button type="submit">Sign Up</button>
-          <button>Continue with Google</button>
+          <div className="buttons">
+            <button className="signButton" type="submit">
+              Sign Up
+            </button>
+            <p className="orText">or</p>
+            <button className="google">Continue with Google</button>
+          </div>
         </form>
       </div>
     </div>
