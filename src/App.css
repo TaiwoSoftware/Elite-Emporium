@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "metropolis-bold";
+  src: url("./components/assets/fonts/metropolis/Metropolis-Bold.otf");
+}
+
+@font-face {
+  font-family: "jura";
+  src: url("./components/assets/fonts/Jura/static/Jura-Regular.ttf");
+}
+
+@font-face {
+  font-family: "metropolis-regular";
+  src: url("./components/assets/fonts/metropolis/Metropolis-Regular.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +28,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "light";
   box-sizing: border-box;
 }
 
@@ -26,7 +40,7 @@ body {
   box-sizing: border-box;
 }
 .user-details {
-  background-color: red;
+  padding: 2rem 4rem;
 }
 
 .sign-image-style {
@@ -35,14 +49,116 @@ body {
 }
 
 .sign-image-style img {
-  width: 90vh;
+  width: 80vh;
   height: 100vh;
 }
 
 .image-details {
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
   color: #fff;
+}
+
+.user-details {
+  font-family: "metropolis-regular";
+  /* background-color: red; */
+}
+
+.sign-up-header {
+  width: 200px;
+}
+
+.sign-up-header h2 {
+  font-family: "jura", Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.sign-up-header p {
+  font-family: "jura", sans-serif;
+  text-align: center;
+}
+
+.sign-up-lowerDetails {
+  margin-top: 18rem;
+}
+
+.sign-up-lowerDetails {
+  font-size: large;
+  text-align: center;
+  font-weight: 900;
+}
+
+.sign-up-lowerDetails h1 {
+  font-family: "metropolis-bold", sans-serif;
+  text-align: center;
+}
+
+.toggle {
+  background-color: #908d8d;
+  width: 50%;
+  display: flex;
+  padding: 0.2rem 0.3rem;
+  border-radius: 2rem;
+  margin-left: 8rem;
+  gap: 2rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.switch {
+  background-color: black;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+
+form {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+label {
+  font-family: "metropolis-regular";
+  font-weight: 900;
+}
+
+.signButton {
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3rem;
+  border: none;
+}
+
+.orText {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.google {
+  background-color: #fff;
+
+  width: 100%;
+  color: #000;
+  border: none;
+  border: 1px solid black;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3rem;
 }
