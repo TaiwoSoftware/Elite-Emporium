@@ -35,6 +35,7 @@ body {
 /* Sign up and login styles */
 .sign {
   width: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
   box-sizing: border-box;
@@ -67,6 +68,7 @@ body {
 }
 
 .sign-up-header {
+  cursor: pointer;
   width: 200px;
 }
 
@@ -154,11 +156,31 @@ label {
 
 .google {
   background-color: #fff;
-
   width: 100%;
   color: #000;
   border: none;
   border: 1px solid black;
   padding: 0.5rem 0.5rem;
   border-radius: 3rem;
+}
+
+.keepAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #c6c5c5;
+}
+
+.innerInput {
+  display: grid;
+}
+
+.innerInput p {
+  color: #c6c5c5;
+  font-size: 1rem;
+  position: absolute;
+  left: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 100;
 }
