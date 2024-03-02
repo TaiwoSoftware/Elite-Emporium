@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import SignUpPage from "./components/Pages/SignUpPage";
+import Home from "./components/Pages/Home";
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<SignUpPage />} />
         </Routes>
+        <Home />
       </Router>
     </>
   );
