@@ -184,3 +184,9 @@ label {
   margin-top: 0.5rem;
   font-weight: 100;
 }
+
+.linker {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
