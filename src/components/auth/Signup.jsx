@@ -35,19 +35,25 @@ function SignUp() {
         </div>
       </div>
       <div className="user-details">
-        <div onClick={handleClick} className="toggle">
+        <div onClick={handleClick}>
           {isOnLogin ? (
-            <ToggleSignUp
-              switchStyle="switch"
-              switchDetails="Sign Up"
-              switchP="Log in"
-            />
+            <>
+              <ToggleSignUp
+                switchStyle="switch"
+                switchDetails="Sign Up"
+                secondSwitch="offSwitch"
+                switchP="Log In"
+              />
+            </>
           ) : (
-            <ToggleSignUp
-              switchP="Sign up"
-              switchDetails="Log in"
-              switchStyle="switch"
-            />
+            <>
+              <ToggleSignUp
+                switchStyle="offSwitch"
+                switchDetails="Sign Up"
+                secondSwitch="switch"
+                switchP="Log In"
+              />
+            </>
           )}
         </div>
         <form>

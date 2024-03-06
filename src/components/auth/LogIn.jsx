@@ -1,6 +1,5 @@
 import CheckboxInput from "./CheckboxInput";
 import UserDetailsForm from "./UserDetailsForm";
-
 function LogIn() {
   return (
     <>
