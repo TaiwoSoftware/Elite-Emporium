@@ -1,8 +1,12 @@
+import { FcGoogle } from "react-icons/fc";
 function GoogleButton() {
   return (
     <>
       <p className="orText">or</p>
-      <button className="google">Continue with Google</button>
+      <button className="google">
+        <FcGoogle className="google-icon" />
+        Continue with Google
+      </button>
     </>
   );
 }

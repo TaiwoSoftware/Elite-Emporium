@@ -99,22 +99,37 @@ body {
 }
 
 .toggle {
-  background-color: #908d8d;
-  width: 50%;
-  display: flex;
-  padding: 0.2rem 0.3rem;
-  border-radius: 2rem;
-  margin-left: 8rem;
-  gap: 2rem;
+  width: 309px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 6px 7px;
   cursor: pointer;
+  gap: 16px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: #908d8d;
+}
+
+.offSwitch {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: black;
 }
 
 .switch {
   background-color: black;
   color: #fff;
-  padding: 0.5rem 2rem;
-  border-radius: 1rem;
+  /* padding: 40px, 40px, 10px, 40px; */
+  padding: 1rem 2rem;
+  height: 42px;
+  text-align: center;
+  width: 133px;
+  border-radius: 20px;
+}
+
+.switch p {
+  margin-top: -0.2rem;
 }
 
 form {
@@ -189,4 +204,9 @@ label {
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
 }
