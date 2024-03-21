@@ -64,7 +64,6 @@ body {
 
 .user-details {
   font-family: "metropolis-regular";
-  /* background-color: red; */
 }
 
 .sign-up-header {
@@ -103,6 +102,7 @@ body {
   height: 50px;
   border-radius: 30px;
   padding: 6px 7px;
+  margin-left: -3rem;
   cursor: pointer;
   gap: 16px;
   display: flex;
@@ -135,6 +135,8 @@ body {
 form {
   padding: 1rem 2rem;
   margin-top: 2rem;
+  width: 500px;
+  margin-left: -7rem;
   box-sizing: border-box;
 }
 input {
@@ -177,6 +179,7 @@ label {
   border: 1px solid black;
   padding: 0.5rem 0.5rem;
   border-radius: 3rem;
+  position: relative;
 }
 
 .keepAll {
@@ -209,4 +212,7 @@ label {
 .google-icon {
   width: 20px;
   height: 20px;
+  position: absolute;
+  left: 8rem;
+  top: 0.4rem;
 }
