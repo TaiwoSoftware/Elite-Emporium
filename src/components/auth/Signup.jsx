@@ -28,6 +28,7 @@ function SignUp() {
   return (
     <div className="sign">
       <div className="sign-image-style">
+        {/* {"tvc is number 49"} */}
         <img src={SignUpImage} alt="Sign-up-image" />
         <div className="image-details">
           <div onClick={homeClick} className="sign-up-header">
@@ -54,7 +55,10 @@ function SignUp() {
         <form>
           {isOnLogin ? <RegisterForm /> : <LogIn />}
           <div className="buttons">
-            <SubmitButton handleClick={handleSign} buttonValue={isOnLogin ? "Sign Up" : "Login"} />
+            <SubmitButton
+              handleClick={handleSign}
+              buttonValue={isOnLogin ? "Sign Up" : "Login"}
+            />
             {toggleGoogleButton && <GoogleButton />}
           </div>
         </form>
