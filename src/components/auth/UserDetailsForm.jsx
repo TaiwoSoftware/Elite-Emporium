@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
+/* eslint-disable react/prop-types */
 function UserDetailsForm({ htmlFor, label, type, placeholder, id }) {
   const [input, setInput] = useState("");
   const handleChange = (e) => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import SignUpImage from "../assets/UI/icons-and-images/sign-in-image.png";
 import RegisterForm from "./RegisterForm";
 import LogIn from "./LogIn";
@@ -6,17 +6,25 @@ import GoogleButton from "./GoogleButton";
 import SubmitButton from "./SubmitButton";
 import ToggleSignUp from "./ToggleSignUp";
 import { useNavigate } from "react-router-dom";
+
 function SignUp() {
   const navigator = useNavigate();
   const [isOnLogin, setIsOnLogin] = useState(true);
   const [toggleGoogleButton, setToggleGoogleButton] = useState(true);
+  const [removeSignUpDetails, setRemoveSignUpDetails] = useState(false);
   const homeClick = () => {
     navigator("/");
   };
+
+  const handleSign = () => {
+    setIsOnLogin(!isOnLogin);
+  };
+
   const handleClick = () => {
     setIsOnLogin(!isOnLogin);
     setToggleGoogleButton(!toggleGoogleButton);
   };
+
   return (
     <div className="sign">
       <div className="sign-image-style">
@@ -36,34 +44,17 @@ function SignUp() {
       </div>
       <div className="user-details">
         <div onClick={handleClick}>
-          {isOnLogin ? (
-            <>
-              <ToggleSignUp
-                switchStyle="switch"
-                switchDetails="Sign Up"
-                secondSwitch="offSwitch"
-                switchP="Log In"
-              />
-            </>
-          ) : (
-            <>
-              <ToggleSignUp
-                switchStyle="offSwitch"
-                switchDetails="Sign Up"
-                secondSwitch="switch"
-                switchP="Log In"
-              />
-            </>
-          )}
+          <ToggleSignUp
+            switchStyle={isOnLogin ? "switch" : "offSwitch"}
+            switchDetails={isOnLogin ? "Sign Up" : "Log In"}
+            secondSwitch={isOnLogin ? "offSwitch" : "switch"}
+            switchP={isOnLogin ? "Log In" : "Sign Up"}
+          />
         </div>
         <form>
           {isOnLogin ? <RegisterForm /> : <LogIn />}
           <div className="buttons">
-            {isOnLogin ? (
-              <SubmitButton buttonValue="Sign up" />
-            ) : (
-              <SubmitButton buttonValue="Login" />
-            )}
+            <SubmitButton handleClick={handleSign} buttonValue={isOnLogin ? "Sign Up" : "Login"} />
             {toggleGoogleButton && <GoogleButton />}
           </div>
         </form>
