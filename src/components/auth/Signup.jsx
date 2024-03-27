@@ -28,7 +28,6 @@ function SignUp() {
   return (
     <div className="sign">
       <div className="sign-image-style">
-        {/* {"tvc is number 49"} */}
         <img src={SignUpImage} alt="Sign-up-image" />
         <div className="image-details">
           <div onClick={homeClick} className="sign-up-header">

@@ -1,10 +1,13 @@
-import { useState } from "react";
 /* eslint-disable react/prop-types */
-function UserDetailsForm({ htmlFor, label, type, placeholder, id }) {
-  const [input, setInput] = useState("");
-  const handleChange = (e) => {
-    setInput(e.target.value);
-  };
+function UserDetailsForm({
+  htmlFor,
+  label,
+  type,
+  placeholder,
+  id,
+  inputs,
+  handleChange,
+}) {
   return (
     <>
       <label htmlFor={htmlFor}>{label}</label>
@@ -13,7 +16,7 @@ function UserDetailsForm({ htmlFor, label, type, placeholder, id }) {
         id={id}
         required
         placeholder={placeholder}
-        value={input}
+        value={inputs}
         onChange={handleChange}
       />
     </>
