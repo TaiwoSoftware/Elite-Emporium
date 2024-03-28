@@ -28,7 +28,7 @@ function RegisterForm() {
         label="Password"
         type="password"
         placeholder="xxxxxxxx"
-        id="passwor"
+        id="password"
       />
     </>
   );
