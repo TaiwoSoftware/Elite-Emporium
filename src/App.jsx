@@ -9,7 +9,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<SignUpPage />} />
         </Routes>
-        <Home />
+        {/* <Home /> */}
       </Router>
     </>
   );

@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-function SubmitButton({ buttonValue }) {
+function SubmitButton({ buttonValue, handleClick }) {
   return (
     <>
-      <button className="signButton" type="submit">
+      <button 
+      onClick={handleClick}
+      className="signButton" type="submit">
         {buttonValue}
       </button>
     </>
