@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SignUpImage from "../assets/UI/icons-and-images/sign-in-image.png";
 import RegisterForm from "./RegisterForm";
 import LogIn from "./LogIn";
@@ -6,12 +6,14 @@ import GoogleButton from "./GoogleButton";
 import SubmitButton from "./SubmitButton";
 import ToggleSignUp from "./ToggleSignUp";
 import { useNavigate } from "react-router-dom";
-
 function SignUp() {
+  const [mainValue, setMainValue] = useState("");
+  const registerHandleChange = (e) => {
+    setMainValue(e.target.value);
+  };
   const navigator = useNavigate();
   const [isOnLogin, setIsOnLogin] = useState(true);
   const [toggleGoogleButton, setToggleGoogleButton] = useState(true);
-  const [removeSignUpDetails, setRemoveSignUpDetails] = useState(false);
   const homeClick = () => {
     navigator("/");
   };
@@ -52,7 +54,14 @@ function SignUp() {
           />
         </div>
         <form>
-          {isOnLogin ? <RegisterForm /> : <LogIn />}
+          {isOnLogin ? (
+            <RegisterForm
+              registerValue={mainValue}
+              registerHandleChange={registerHandleChange}
+            />
+          ) : (
+            <LogIn />
+          )}
           <div className="buttons">
             <SubmitButton
               handleClick={handleSign}
