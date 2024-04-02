@@ -1,10 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import UserDetailsForm from "./UserDetailsForm";
 function RegisterForm({ registerValue, registerHandleChange }) {
-  const [nameInput, SetNameInput] = useState('')
-  const [emailInput, SetEmailInput] = useState('')
-  const [telInput, SetTelInput] = useState('')
-  const [passwordInput, SetPasswordInput] = useState('')
   return (
     <>
       <UserDetailsForm
@@ -15,7 +11,6 @@ function RegisterForm({ registerValue, registerHandleChange }) {
         id="name"
         handleChange={registerHandleChange}
         value={registerValue}
-
       />
       <UserDetailsForm
         htmlFor="email"
