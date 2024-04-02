@@ -216,3 +216,11 @@ label {
   left: 8rem;
   top: 0.4rem;
 }
+
+.lines-styles {
+  display: flex;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
